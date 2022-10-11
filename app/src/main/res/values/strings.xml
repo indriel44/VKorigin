@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Sample</string>
+    <string name="app_name">Расчет отклонения</string>
+    <string name="Height">Высота стойки:</string>
+    <string name="LengthL">Длина лапки:</string>
+    <string name="LengthD">Длина датчика:</string>
+    <string name="Otkl">Допускаемое откл:</string>
+    <string name="Butt">Рассчитать</string>
+    <string name="AnswerT">Допускаемый угол:</string>
+    <string name="Answer">...</string>
 </resources>
