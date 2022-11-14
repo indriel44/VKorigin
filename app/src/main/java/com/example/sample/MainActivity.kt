@@ -7,6 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlin.math.sqrt
 import kotlin.math.atan
+import kotlin.math.sin
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,13 +18,21 @@ class MainActivity : AppCompatActivity() {
             val toast = Toast.makeText(this, "Completed!", Toast.LENGTH_SHORT)
             toast.show()
             val final: TextView = findViewById(R.id.textView6)
-            val a: TextView = findViewById(R.id.editText); val a1=Integer.parseInt( a.getText().toString())*1000;
-            val b: TextView = findViewById(R.id.editText2); val b1=Integer.parseInt( b.getText().toString())*1000;
-            val c: TextView = findViewById(R.id.editText1); val c1=Integer.parseInt( c.getText().toString())*1000;
-            val d: TextView = findViewById(R.id.editText3); val d1=Integer.parseInt( d.getText().toString())*1000;
-           val a2=(a1-c1).toDouble(); val d2=(a2-d1/1000).toDouble(); val b2=b1.toDouble()
-           val answ=360*atan((sqrt(a2*a2+b2*b2-d2*d2)-b2)/(a2+d2))/3.1415
-            final.text = "${answ}"
+            val a: TextView = findViewById(R.id.editText)
+            val a1 = Integer.parseInt(a.getText().toString()) * 1000
+            val b: TextView = findViewById(R.id.editText2)
+            val b1 = Integer.parseInt(b.getText().toString()) * 1000
+            val c: TextView = findViewById(R.id.editText1)
+            val c1 = Integer.parseInt(c.getText().toString()) * 1000
+            val d: TextView = findViewById(R.id.editText3)
+            val d1 = Integer.parseInt(d.getText().toString()) * 1000
+            val a2 = (a1 - c1).toDouble()
+            val d2 = (a2 - d1 / 1000)
+            val b2 = b1.toDouble()
+            var answ =
+                atan((sqrt(a2 * a2 + b2 * b2 - d2 * d2) - b2) / (a2 + d2))
+            answ = sin(answ)*a1
+            final.text = "$answ"
         }
     }
 }
